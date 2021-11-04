@@ -1,6 +1,6 @@
 [package]
 name = "slack"
-version = "0.25.0"
+version = "0.25.1"
 authors = ["Benjamin Elder <bentheelder@gmail.com>", "Matt Jones <mthjones@gmail.com>", "David Hewson <dev@daveid.co.uk>"]
 repository = "https://github.com/slack-rs/slack-rs.git"
 documentation = "https://docs.rs/slack"
@@ -9,8 +9,9 @@ license = "Apache-2.0"
 edition = "2018"
 readme = "README.md"
 
-[dependencies.slack_api]
-version = "0.23.1"
+[dependencies.slack-api]
+git = "https://github.com/mkroman/slack-rs-api"
+version = "0.23.2"
 default-features = false
 features = ["reqwest_blocking"]
 
@@ -24,5 +25,5 @@ url = "2.1.0"
 
 [features]
 default = ["with_native_tls"]
-with_rustls = ["slack_api/with_rustls"]
-with_native_tls = ["slack_api/with_native_tls"]
+with_rustls = ["slack-api/with_rustls"]
+with_native_tls = ["slack-api/with_native_tls"]
